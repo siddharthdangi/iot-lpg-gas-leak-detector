@@ -8,61 +8,101 @@ Proposed Solution:
 We propose an IoT-based smart LPG gas safety system that continuously monitors gas levels near the stove or regulator area and automatically reacts in case of danger.
 
 The system:
-Detects LPG gas leakage using a gas sensor
-Provides instant local alerts (buzzer & LED)
-Uses a controller-based decision logic
-Simulates automatic gas cut-off
-Is designed as a non-invasive external add-on, without modifying government-issued LPG regulators
+
+1) Detects LPG gas leakage using a gas sensor
+
+2) Provides instant local alerts (buzzer & LED)
+
+3) Uses a controller-based decision logic
+
+4) Simulates automatic gas cut-off
+
+5) Is designed as a non-invasive external add-on, without modifying government-issued LPG regulators
 
 Hardware Components Used:
-ESP32 Development Board
-MQ-5 Gas Sensor
-Active Buzzer
-LED with resistor
-Breadboard
-Jumper wires
-USB power supply
-(Servo / solenoid valve planned for next round)
+1) ESP32 Development Board
+
+2) MQ-5 Gas Sensor
+
+3) Active Buzzer 
+
+4) LED with resistor
+
+5) Breadboard
+
+6) Jumper wires
+
+7) USB power supply
+
+8) (Servo / solenoid valve planned for next round)
 
 System Architecture & Working:
-The gas sensor continuously measures gas concentration.
-The ESP32 reads the analog sensor value.
-The value is compared with a predefined safety threshold.
-If gas concentration is below threshold:
-System remains in monitoring state.
+
+1) The gas sensor continuously measures gas concentration.
+
+2) The ESP32 reads the analog sensor value.
+
+3) The value is compared with a predefined safety threshold.
+
+4) If gas concentration is below threshold:
+
+5) System remains in monitoring state.
+
 If gas concentration exceeds threshold:
-Buzzer and LED are activated
-Gas cut-off logic is triggered (simulated)
-Alert message is generated
+
+1) Buzzer and LED are activated
+
+2) Gas cut-off logic is triggered (simulated)
+
+3) Alert message is generated
 
 Prototype Status (Round-1 Submission):
-Gas detection using MQ sensor is functional
-ESP32 successfully processes sensor data
-Buzzer and LED alert system works correctly
-Gas cut-off is logically implemented (simulated)
-Serial Monitor used for real-time monitoring and alerts
-This prototype demonstrates the core functionality and feasibility of the system.
+
+1) Gas detection using MQ sensor is functional
+
+2) ESP32 successfully processes sensor data
+
+3) Buzzer and LED alert system works correctly
+
+4) Gas cut-off is logically implemented (simulated)
+
+5) Serial Monitor used for real-time monitoring and alerts
+
+6)This prototype demonstrates the core functionality and feasibility of the system.
 
 Planned Enhancements (Round-2 Scope):
-In the next stage, the system will be enhanced with:
-Physical gas cut-off using servo motor or solenoid valve
-Compact clip-on enclosure compatible with LPG regulators
-Mobile notification using IoT platform (Blynk/Firebase)
-Improved false-alarm filtering
-Battery backup for power failure
-Multiple sensor placement for better coverage
+
+1) In the next stage, the system will be enhanced with:
+
+2) Physical gas cut-off using servo motor or solenoid valve
+
+3) Compact clip-on enclosure compatible with LPG regulators
+
+4) Mobile notification using IoT platform (Blynk/Firebase)
+
+5) Improved false-alarm filtering
+
+6) Battery backup for power failure
+
+7) Multiple sensor placement for better coverage
 
 Safety & Ethics Consideration:
-The system is designed as an external safety attachment
-It does not replace or modify government-issued LPG regulators  
-All demonstrations are performed without real LPG flames  
-User safety is prioritized over automation
+1) The system is designed as an external safety attachment
+
+2) It does not replace or modify government-issued LPG regulators  
+
+3) All demonstrations are performed without real LPG flames  
+
+4) User safety is prioritized over automation
 
 Team & Contributions:
-Saksham – Hardware integration & circuit assembly
-Anshika – Sensor testing & embedded logic support
-Siddharth – System architecture, flowcharts & documentation
-Sunidhi – Use-case analysis, safety validation & demo presentation
+1) Saksham – Hardware integration & circuit assembly
+
+2) Anshika – Sensor testing & embedded logic support
+
+3) Siddharth – System architecture, flowcharts & documentation
+
+4) Sunidhi – Use-case analysis, safety validation & demo presentation
 
 Conclusion:
 
